@@ -1,0 +1,33 @@
+int LightRed = 8;
+int LightYellow = 7;
+int LightGreen = 4;
+
+void setup() {
+  pinMode(LightRed, OUTPUT);
+  pinMode(LightYellow, OUTPUT);
+  pinMode(LightGreen, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LightGreen, LOW);
+  digitalWrite(LightYellow, LOW);
+  digitalWrite(LightRed, HIGH);
+  delay(10000);
+  digitalWrite(LightYellow, HIGH);
+  delay(1500);
+  digitalWrite(LightRed, LOW);
+  digitalWrite(LightYellow, LOW);
+  delay(200);
+  digitalWrite(LightGreen, HIGH);
+  delay(10000);
+
+  for(int i = 0;i < 2;i++) {
+  digitalWrite(LightGreen, LOW);
+  delay(500);
+  digitalWrite(LightGreen, HIGH);
+  delay(500);
+  }
+  digitalWrite(LightGreen, LOW);
+  digitalWrite(LightYellow, HIGH);
+  delay(1500);
+}
